@@ -9,8 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### This Github repository can be found at https://github.com/Thewonk/Basketballdata
 ```{r, warning=FALSE}
-nba <- read.csv(file.choose())
+nba <- read.csv("../data/Seasons_Stats_NBA.csv")
 ```
 
 ####Define Function 1
@@ -30,8 +31,9 @@ oldest_player(year = 1985, data = nba)
 ```
 
 ###Define Function 3
-```{r, warning=FALSE}
-
+```{r, warning=FALSE, message=FALSE}
+source("make_corr_plot.R")
+make_corr_plot(data = nba, year = 1985)
 ```
 
 
