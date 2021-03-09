@@ -14,6 +14,7 @@
 #'
 make_corr_plot <- function(data, year) {
   library(corrplot)
+  library(dplyr)
   numericalvariable<-select_if(data, is.numeric)
   yearnumerical <- subset(numericalvariable, Year==year)
   corrplot(cor(yearnumerical), method="color")
