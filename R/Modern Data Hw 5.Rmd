@@ -1,0 +1,38 @@
+---
+title: "Modern Data HW 5"
+author: "Funlola Otukoya"
+date: "3/7/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, warning=FALSE}
+nba <- read.csv(file.choose())
+```
+
+####Define Function 1
+
+```{r, warning=FALSE}
+source("free_throws_percent.R")
+free_throws_percent(year = 1980, player = "Mike Mitchell", data = nba)
+free_throws_percent(year = 1979, player = "Tree Rollins", data = nba)
+```
+
+
+###Define Function 2
+
+```{r, warning=FALSE}
+source("oldest_player.R")
+oldest_player(year = 1985, data = nba)
+```
+
+###Define Function 3
+```{r, warning=FALSE}
+
+```
+
+
+
